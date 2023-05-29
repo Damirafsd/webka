@@ -214,8 +214,8 @@
                     </form>
                     <div class="tabs">
                       <div class="tab-labels">
-                        <span data-id="1" class="active">Malimet</span>
-                        <span data-id="2">Biz Turali</span>
+                        <span data-id="1" class="tabsdamir1 active">Malimet</span>
+                        <span data-id="2" class="tabsdamir2">Biz Turali</span>
                       </div>
                       <div class="tab-slides
                       ">
@@ -227,6 +227,22 @@
                         </div>
                       </div>
                     </div>
+                      <script> 
+                        $(document).ready(function(){
+                          $(".tabsdamir2").click(function(){
+                            $("#tab-slide-1").removeClass("active");
+                            $(".tabsdamir1").removeClass("active");
+                            $("#tab-slide-2").addClass("active");
+                            $(".tabsdamir2").addClass("active");
+                          });
+                          $(".tabsdamir1").click(function(){
+                            $("#tab-slide-2").removeClass("active");
+                            $(".tabsdamir2").removeClass("active");
+                            $("#tab-slide-1").addClass("active");
+                            $(".tabsdamir1").addClass("active");
+                          });
+                        });
+                    </script>
                     <div class="social-sharing-btn-wrapper">
                       <span id="social_sharing_btn">Share</span>
                     </div>
